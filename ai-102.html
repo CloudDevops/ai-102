@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI-102 Expandable Mind Tree (Hover)</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f0f2f5;
+    }
+    .tree-container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .tree-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+    .tree-section {
+      flex: 1 1 400px;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      position: relative;
+      min-height: 200px;
+    }
+    .tree-section:hover .tree-list,
+    .tree-section .tree-list:hover {
+      display: block;
+    }
+    .section-title {
+      font-size: 18px;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 8px;
+      cursor: default;
+      color: #005a9e;
+    }
+    .tree-list {
+      list-style: none;
+      padding-left: 0;
+      display: none;
+      margin-top: 0;
+      position: relative;
+      z-index: 1;
+    }
+    ul ul {
+      list-style: none;
+      padding-left: 15px;
+      display: none;
+    }
+
+    li:hover > ul {
+      display: block;
+    }
+    li {
+      margin: 10px 0;
+      position: relative;
+    }
+    li span {
+      font-weight: bold;
+      color: #005a9e;
+      cursor: default;
+    }
+    .details {
+      display: none;
+      font-style: italic;
+      color: #333;
+      margin-left: 10px;
+      font-size: 14px;
+    }
+    li:hover > .details {
+      display: inline;
+    }
+  </style>
+</head>
+<body>
+  <h1>AI-102 Expandable Mind Tree (Hover Enabled)</h1>
+  <div class="tree-container">
+    <div class="tree-row">
+      <div class="tree-section">
+        <div class="section-title">Azure Cognitive Services</div>
+        <ul class="tree-list">
+          <li><span>Computer Vision</span>
+            <ul>
+              <li><span>OCR</span><span class="details"> Extracts printed and handwritten text</span></li>
+              <li><span>Image Tagging</span><span class="details"> Describes content in images</span></li>
+              <li><span>Landmark/Celebrity Detection</span><span class="details"> Identifies famous people and places</span></li>
+            </ul>
+          </li>
+          <li><span>Custom Vision</span>
+            <ul>
+              <li><span>Classification</span><span class="details"> Label images into predefined categories</span></li>
+              <li><span>Object Detection</span><span class="details"> Detect and localize objects in images</span></li>
+            </ul>
+          </li>
+          <li><span>Face API</span>
+            <ul>
+              <li><span>Detection</span><span class="details"> Locates human faces in an image</span></li>
+              <li><span>Attributes</span><span class="details"> Estimates age, emotion, gender, and more</span></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="tree-section">
+        <div class="section-title">Language + Speech + Decision</div>
+        <ul class="tree-list">
+          <li><span>Language</span>
+            <ul>
+              <li><span>Text Analytics</span><span class="details"> Performs sentiment analysis, key phrase and PII extraction</span></li>
+              <li><span>Language Understanding</span><span class="details"> Builds intent-based NLP models</span></li>
+              <li><span>Translator</span><span class="details"> Real-time text translation across languages</span></li>
+            </ul>
+          </li>
+          <li><span>Speech</span>
+            <ul>
+              <li><span>Speech to Text</span><span class="details"> Converts audio to text</span></li>
+              <li><span>Text to Speech</span><span class="details"> Generates human-like speech</span></li>
+              <li><span>Speech Translation</span><span class="details"> Real-time translation with voice input/output</span></li>
+            </ul>
+          </li>
+          <li><span>Decision</span>
+            <ul>
+              <li><span>Personalizer</span><span class="details"> Recommends personalized content</span></li>
+              <li><span>Content Moderator</span><span class="details"> Detects profanity, PII, or unsafe content</span></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="tree-row">
+      <div class="tree-section">
+        <div class="section-title">Azure Machine Learning</div>
+        <ul class="tree-list">
+          <li><span>Components</span>
+            <ul>
+              <li><span>AutoML</span><span class="details"> Automates model training and selection</span></li>
+              <li><span>Designer</span><span class="details"> Drag-and-drop interface for model pipelines</span></li>
+              <li><span>Compute Targets</span><span class="details"> Manages scalable compute for training</span></li>
+              <li><span>Deployment</span><span class="details"> Expose models as REST APIs via endpoints</span></li>
+              <li><span>Responsible ML</span><span class="details"> Tracks data drift, bias, and model fairness</span></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="tree-section">
+        <div class="section-title">Azure Cognitive Search</div>
+        <ul class="tree-list">
+          <li><span>Search Capabilities</span>
+            <ul>
+              <li><span>Indexers</span><span class="details"> Ingest data from sources like Blob, SQL</span></li>
+              <li><span>Skillsets</span><span class="details"> Apply AI enrichments like OCR or NER</span></li>
+              <li><span>Semantic Search</span><span class="details"> Rank results based on intent</span></li>
+              <li><span>Projections</span><span class="details"> Shape enriched data before indexing</span></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="tree-section">
+        <div class="section-title">Conversational AI</div>
+        <ul class="tree-list">
+          <li><span>Bot Framework</span>
+            <ul>
+              <li><span>Bot Framework SDK</span><span class="details"> Code-based bot development</span></li>
+              <li><span>Bot Composer</span><span class="details"> Visual authoring of dialogs</span></li>
+            </ul>
+          </li>
+          <li><span>Other Features</span>
+            <ul>
+              <li><span>Custom QnA</span><span class="details"> Structured Q&A with follow-up support</span></li>
+              <li><span>Channel Integration</span><span class="details"> Supports Teams, Web Chat, Slack, etc.</span></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
